@@ -1,0 +1,16 @@
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\bin\Debug\netstandard2.0\Ejercicio1_3.deps.json
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\bin\Debug\netstandard2.0\Ejercicio1_3.dll
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\bin\Debug\netstandard2.0\Ejercicio1_3.pdb
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Ejercicio1_3.csproj.AssemblyReference.cache
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Ejercicio1_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Ejercicio1_3.AssemblyInfoInputs.cache
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Ejercicio1_3.AssemblyInfo.cs
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Ejercicio1_3.csproj.CoreCompileInputs.cache
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Ejercicio1_3.dll
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\refint\Ejercicio1_3.dll
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Ejercicio1_3.pdb
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\ref\Ejercicio1_3.dll
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Vistas\Informacion.xaml.g.cs
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Vistas\MainPage.xaml.g.cs
