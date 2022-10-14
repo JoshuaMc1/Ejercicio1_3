@@ -1,24 +1,24 @@
-﻿using Ejercicio1_3.Data;
-using Ejercicio1_3.Modelos;
+﻿using Ejercicio1_3.Modelos;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace Ejercicio1_3
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace Ejercicio1_3.Vistas
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Editar : ContentPage
     {
-        public MainPage()
+        public Editar()
         {
             InitializeComponent();
         }
 
-        private async void btnGuardar_Clicked(object sender, EventArgs e)
+        private async void btnEditar_Clicked(object sender, EventArgs e)
         {
             if (!validarCampoVacio(txtNombres) && !validarCampoVacio(txtApellidos) && !validarCampoVacio(txtEdad) &&
                 !validarCampoVacio(txtCorreo) && !validarCampoVacio(txtDireccion))
@@ -27,6 +27,7 @@ namespace Ejercicio1_3
                 {
                     var persona = new Persona
                     {
+                        Id = Convert.ToInt32(txtID.Text.Trim()),
                         nombres = txtNombres.Text.Trim(),
                         apellidos = txtApellidos.Text.Trim(),
                         edad = int.Parse(txtEdad.Text.Trim()),
@@ -37,20 +38,21 @@ namespace Ejercicio1_3
                     int result = await App.Database.guardarPersona(persona);
                     if (result > 0)
                     {
-                        mensaje("Aviso", "Los datos se guardaron exitosamente");
-                        limpiarCampos();
+                        mensaje("Aviso", "Los datos se editaron exitosamente");
+                        await Navigation.PushAsync(new Informacion());
                     }
-                    else mensaje("Error al guardar", "Al parecer los datos no se han guardado");
-                } catch(Exception ex)
-                {
-                     mensaje("Exception", "Error: " + ex.Message);
+                    else
+                    {
+                        bool opcion = await DisplayAlert("Error al editar", "Al parecer los datos no se han guardado, desea intentar de nuevo?", "Si", "No");
+                        if (opcion == false) await Navigation.PushAsync(new Informacion());
+                    }
                 }
-            } else mensaje("Campo vacio", "Debe ingresar loas campos solicitados");
-        }
-
-        private async void btnVer_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Vistas.Informacion());
+                catch (Exception ex)
+                {
+                    mensaje("Exception", "Error: " + ex.Message);
+                }
+            }
+            else mensaje("Campo vacio", "Debe ingresar loas campos solicitados");
         }
 
         public bool validarCampoVacio(Entry campo)
@@ -61,15 +63,6 @@ namespace Ejercicio1_3
         public async void mensaje(String tittulo, String mensaje)
         {
             await DisplayAlert(tittulo, mensaje, "Ok");
-        }
-
-        public void limpiarCampos()
-        {
-            txtNombres.Text = "";
-            txtApellidos.Text = "";
-            txtEdad.Text = "";
-            txtCorreo.Text = "";
-            txtDireccion.Text = "";
         }
     }
 }

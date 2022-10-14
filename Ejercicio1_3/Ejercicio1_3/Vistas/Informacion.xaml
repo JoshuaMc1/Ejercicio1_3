@@ -2,6 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio1_3.Vistas.Informacion">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            x:Name="btnAgregar"
+            Text="Agregar otro empleado"
+            Clicked="btnAgregar_Clicked"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
@@ -12,33 +18,43 @@
                 FontSize="36"/>
             </Frame>
             <StackLayout>
-                <ListView x:Name="txtLista">
-                    <ListView.ItemTemplate>
+                <CollectionView
+                    x:Name="txtLista"
+                    SelectionMode="Single"
+                    Margin="10"
+                    SelectionChanged="txtLista_SelectionChanged">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
+                            Orientation="Vertical"
+                            ItemSpacing="15"/>
+                    </CollectionView.ItemsLayout>
+                    
+                    <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
-                                <StackLayout 
+                            <StackLayout 
                                     Orientation="Horizontal" 
                                     HorizontalOptions="FillAndExpand"
-                                    Margin="20, 10, 20, 0">
-                                    <Label 
-                                        Text="{Binding Id}" 
-                                        HorizontalOptions="StartAndExpand" 
-                                        TextColor="Black" 
-                                        FontAttributes="Bold"/>
-                                    <Label 
-                                        Text="{Binding nombres}" 
-                                        HorizontalOptions="StartAndExpand"/>
-                                    <Label 
-                                        Text="{Binding apellidos}" 
-                                        HorizontalOptions="StartAndExpand"/>
-                                    <Label 
-                                        Text="{Binding edad}" 
-                                        HorizontalOptions="StartAndExpand"/>
-                                </StackLayout>
-                            </ViewCell>
+                                    Margin="20, 10, 20, 0" 
+                                    Padding="5">
+                                <Label 
+                                    Text="{Binding Id}" 
+                                    HorizontalOptions="StartAndExpand" 
+                                    TextColor="Black" 
+                                    FontAttributes="Bold"/>
+                                <Label 
+                                    Text="{Binding nombres}" 
+                                    HorizontalOptions="StartAndExpand"/>
+                                <Label 
+                                     Text="{Binding apellidos}" 
+                                     HorizontalOptions="StartAndExpand"/>
+                                <Label 
+                                     Text="{Binding edad}" 
+                                     HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

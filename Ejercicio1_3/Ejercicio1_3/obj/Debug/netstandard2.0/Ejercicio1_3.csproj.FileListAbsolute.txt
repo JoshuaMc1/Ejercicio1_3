@@ -14,3 +14,4 @@ C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\net
 C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\ref\Ejercicio1_3.dll
 C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Vistas\Informacion.xaml.g.cs
 C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Vistas\MainPage.xaml.g.cs
+C:\Users\joshu\source\repos\Ejercicio1_3\Ejercicio1_3\Ejercicio1_3\obj\Debug\netstandard2.0\Vistas\Editar.xaml.g.cs

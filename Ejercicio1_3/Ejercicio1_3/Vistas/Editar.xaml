@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1_3.Vistas.Editar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label 
+                    Text="Ejercicio 1.3" 
+                    HorizontalTextAlignment="Center" 
+                    TextColor="White" 
+                    FontSize="36"/>
+            </Frame>
+            <StackLayout Padding="10">
+                <StackLayout Margin="0, 10, 0, 10">
+                    <Label 
+                        Text="ID" 
+                        TextColor="Black" 
+                        FontAttributes="Bold"/>
+                    <Entry 
+                        x:Name="txtID" 
+                        Text="{Binding Id}"
+                        MaxLength="50" 
+                        Keyboard="Text"
+                        IsEnabled="False"/>
+                </StackLayout>
+                <StackLayout Margin="0, 10, 0, 10">
+                    <Label 
+                        Text="Nombres" 
+                        TextColor="Black" 
+                        FontAttributes="Bold"/>
+                    <Entry 
+                        x:Name="txtNombres" 
+                        Text="{Binding nombres}"
+                        Placeholder="Ingrese su nombre" 
+                        MaxLength="50" 
+                        Keyboard="Text"/>
+                </StackLayout>
+                <StackLayout Margin="0, 10, 0, 10">
+                    <Label 
+                        Text="Apellidos" 
+                        TextColor="Black" 
+                        FontAttributes="Bold"/>
+                    <Entry 
+                        x:Name="txtApellidos" 
+                        Text="{Binding apellidos}"
+                        Placeholder="Ingrese su apellido" 
+                        MaxLength="50" 
+                        Keyboard="Text"/>
+                </StackLayout>
+                <StackLayout Margin="0, 10, 0, 10">
+                    <Label 
+                        Text="Edad" 
+                        TextColor="Black" 
+                        FontAttributes="Bold"/>
+                    <Entry 
+                        x:Name="txtEdad" 
+                        Placeholder="Ingrese su edad" 
+                        Text="{Binding edad}"
+                        MaxLength="3" 
+                        Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Margin="0, 10, 0, 10">
+                    <Label 
+                        Text="Correo electrónico" 
+                        TextColor="Black" 
+                        FontAttributes="Bold"/>
+                    <Entry 
+                        x:Name="txtCorreo" 
+                        Placeholder="Ingrese su correo electrónico" 
+                        Text="{Binding correo}"
+                        MaxLength="100" 
+                        Keyboard="Email"/>
+                </StackLayout>
+                <StackLayout Margin="0, 10, 0, 10">
+                    <Label
+                        Text="Direccion"
+                        TextColor="Black"
+                        FontAttributes="Bold"/>
+                    <Entry
+                        x:Name="txtDireccion"
+                        Placeholder="Ingrese su direccion"
+                        Text="{Binding direccion}"
+                        MaxLength="250"
+                        Keyboard="Plain"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button 
+                        x:Name="btnEditar" 
+                        Text="Editar datos" 
+                        BackgroundColor="#086375" 
+                        TextColor="White" 
+                        CornerRadius="12"
+                        Clicked="btnEditar_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
